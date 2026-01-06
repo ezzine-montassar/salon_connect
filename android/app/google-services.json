@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183147970144",
+    "project_id": "salonconnect-indb2d-2025",
+    "storage_bucket": "salonconnect-indb2d-2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183147970144:android:2b76d7ef62315cd8828d05",
+        "android_client_info": {
+          "package_name": "com.example.salon_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiJGl8rNbAhEhugv0LFY5GkoIMwqwGUiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

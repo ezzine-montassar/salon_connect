@@ -34,6 +34,7 @@ Le projet suit une **architecture modulaire**, séparant clairement :
 
 Cette organisation favorise la **maintenabilité**, la **lisibilité** et l’**évolutivité** du code.
 
+---
 ###  Structure des dossiers
 
 L’organisation du code source dans le dossier `lib/` est la suivante :
@@ -65,6 +66,8 @@ Elle repose entièrement sur l’écosystème **Firebase**, garantissant :
 - une sécurité renforcée
 - une scalabilité native
 
+---
+
 ###  Authentification
 
 - **Firebase Authentication**
@@ -72,6 +75,7 @@ Elle repose entièrement sur l’écosystème **Firebase**, garantissant :
 - Gestion des sessions utilisateurs
 - Distinction des rôles **Client / Coiffeur**
 - Centralisation de la logique dans `auth_service.dart`
+---
 
 ###  Base de données
 
@@ -99,7 +103,6 @@ Avant de lancer le projet, assure-toi que ton environnement contient :
 - **Émulateur Android** ou **appareil physique** connecté en mode débogage USB
 
 ---
-
 ##  Installation et Démarrage
 
 ### 1️⃣ Clonage du dépôt
@@ -140,6 +143,7 @@ Les principales dépendances incluent :
 ```bash
 flutter run
 ```
+---
 
 ##  Fonctionnalités détaillées
 
@@ -159,7 +163,6 @@ flutter run
 - Gestion des rendez-vous entrants
 - Configuration du profil professionnel (`profile_coiff.dart`)
 
----
 
 ##  Technologies utilisées
 
@@ -167,8 +170,6 @@ flutter run
 - **Dart**
 - **Firebase Authentication**
 - **Cloud Firestore**
-
----
 
 ##  Licence
 

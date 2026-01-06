@@ -7,7 +7,7 @@ Ce projet démontre la mise en place d’une **architecture d’application mode
 
 ---
 
-## 📌 Vue d’ensemble du projet
+##  Vue d’ensemble du projet
 
 L’objectif principal de l’application est de **fluidifier la gestion des agendas** des salons de coiffure tout en offrant une **expérience de réservation simple et intuitive** aux utilisateurs.
 
@@ -25,7 +25,7 @@ L’application gère deux parcours utilisateurs distincts au sein de la même i
 
 ---
 
-## 🧱 Architecture Technique
+##  Architecture Technique
 
 Le projet suit une **architecture modulaire**, séparant clairement :
 
@@ -34,7 +34,7 @@ Le projet suit une **architecture modulaire**, séparant clairement :
 
 Cette organisation favorise la **maintenabilité**, la **lisibilité** et l’**évolutivité** du code.
 
-### 📂 Structure des dossiers
+###  Structure des dossiers
 
 L’organisation du code source dans le dossier `lib/` est la suivante :
 
@@ -54,6 +54,7 @@ lib/
 │   └── profile_coiff.dart   # Gestion du profil Coiffeur
 └── services/                # Couche Logique & Données
     └── auth_service.dart    # Gestion centralisée de l'authentification (Firebase Auth)
+```
 
 ## Backend et Services (Firebase)
 
@@ -64,7 +65,7 @@ Elle repose entièrement sur l’écosystème **Firebase**, garantissant :
 - une sécurité renforcée
 - une scalabilité native
 
-### 🔐 Authentification
+###  Authentification
 
 - **Firebase Authentication**
 - Gestion de l’inscription et de la connexion via **email / mot de passe**
@@ -72,7 +73,7 @@ Elle repose entièrement sur l’écosystème **Firebase**, garantissant :
 - Distinction des rôles **Client / Coiffeur**
 - Centralisation de la logique dans `auth_service.dart`
 
-### 🗄️ Base de données
+###  Base de données
 
 - **Cloud Firestore** (NoSQL orientée documents)
 
@@ -87,7 +88,7 @@ Elle repose entièrement sur l’écosystème **Firebase**, garantissant :
 
 ---
 
-## ⚙️ Prérequis techniques
+##  Prérequis techniques
 
 Avant de lancer le projet, assure-toi que ton environnement contient :
 
@@ -99,13 +100,77 @@ Avant de lancer le projet, assure-toi que ton environnement contient :
 
 ---
 
-## 🚀 Installation et Démarrage
+##  Installation et Démarrage
 
 ### 1️⃣ Clonage du dépôt
 
 ```bash
 git clone https://github.com/VOTRE-USERNAME/salon-connect.git
 cd salon-connect
+```
 
+### 2️⃣ Installation des dépendances
 
+```bash
+flutter pub get
+```
+Les principales dépendances incluent :
 
+- `firebase_core`
+- `firebase_auth`
+- `cloud_firestore`
+
+---
+
+### 3️⃣ Configuration Firebase
+
+ **Important** : Les clés Firebase ne sont pas incluses dans ce dépôt.
+
+Étapes à suivre :
+
+1. Créer un projet sur la **Firebase Console**
+2. Ajouter une application **Android**
+   - Nom du package conforme au `build.gradle`
+3. Télécharger le fichier `google-services.json`
+4. Le placer dans le dossier :
+      ## android/app/
+
+### 4️⃣ Lancement de l’application
+
+```bash
+flutter run
+```
+
+##  Fonctionnalités détaillées
+
+###  Module d’Authentification
+- Identification du rôle utilisateur (**Client / Coiffeur**)
+- Redirection automatique vers le flux correspondant
+- Sécurisation de l’accès aux pages internes
+
+###  Espace Client
+- Inscription & Connexion
+- Recherche de salons disponibles
+- Prise de rendez-vous (date / heure)
+- Gestion du profil utilisateur (`profile_client.dart`)
+
+###  Espace Coiffeur
+- Tableau de bord de l’activité (`home_coiff.dart`)
+- Gestion des rendez-vous entrants
+- Configuration du profil professionnel (`profile_coiff.dart`)
+
+---
+
+##  Technologies utilisées
+
+- **Flutter**
+- **Dart**
+- **Firebase Authentication**
+- **Cloud Firestore**
+
+---
+
+##  Licence
+
+Ce projet est fourni à des fins **éducatives et démonstratives**.  
+Libre à vous de l’adapter ou de l’améliorer selon vos besoins.
